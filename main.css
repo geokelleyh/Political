@@ -1,0 +1,349 @@
+
+
+.candidate-container h2{
+	font-family: 'Garamond', 'Arial Narrow', Arial, sans-serif;
+	color: rgb(255, 255, 255);
+	position: absolute;
+	z-index: 10000;
+	text-shadow: 0 0 1px rgba(255,255,255,0.8), 1px 1px 1px rgba(0,0,0,0.2);
+	font-size: 35px;
+	line-height: 50px;
+	top: 0px;
+	right: 0px;
+	white-space: nowrap;
+	opacity: 0;
+	transition: all 0.5s linear 0.7s;
+}
+.candidate-container .candidate-slide:target h2{
+	opacity: 1;
+	
+}
+.candidate-slide{
+	text-align:left;
+	position: relative;
+	left: 0px;
+	padding-top: 100px;
+	margin: 0 5%;
+	width: 75%;
+	height:100%;
+	opacity: 0;
+}
+.candidate-slide:target{
+	opacity: 1;
+	z-index: 1000;
+}
+.candidate-slide nav a{
+	text-align: left;
+	display: block;
+	font-family: 'Garamond', 'Arial Narrow', Arial, sans-serif;
+	border: 8px solid #000000;
+	padding: 2%;
+	font-size: 50px;
+	letter-spacing: 1px;
+	text-shadow: 2px 5px 2px rgba(12, 12, 12, 0.4);
+	color: #ffffff;
+	line-height: 66px;
+	outline: nonrgba(82, 133, 182, 0.699) solid 10px;
+	outline-style: double;
+	outline-color: black; 
+	margin: 0 0 10px 0;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+	background: #fff url(images/bp.jpg) no-repeat center center;
+	background-size: 100%; 
+	background-clip: padding-box;
+	opacity: 0;
+	transition: opacity 0.4s linear, transform 0.4s linear, box-shadow 0.3s ease-in-out;
+}
+.candidate-slide nav a:hover{
+	box-shadow: 1px 2px 4px rgba(0,0,0,0.2);
+}
+.candidate-slide:target nav a{
+	opacity: 1;
+	transform: scale(1,1);
+}
+.candidate-slide nav a:nth-child(2){
+	transition-delay: 0.3s, 0.3s, 0s;
+}
+.candidate-slide nav a:nth-child(3){
+	
+	transition-delay: 0.6s, 0.6s, 0s;
+}
+.candidate-slide nav a:nth-child(4){
+
+	transition-delay: .9s, .9s,0s;
+}
+.candidate-slide-sub nav a{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	font-size: 40px;
+}
+.candidate-slide-sub nav a:nth-child(odd){
+	margin-right: 5px;
+}
+
+.candidate-content{
+
+	background-size: cover; 
+	height: 60em;	
+	text-align: left;
+	padding: 20px 20px 5px;
+	box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+	border: 8px solid #fff;
+	margin-top: 5px;
+	cursor: pointer;
+	opacity: 0;
+	transform: scale(0);
+	transition: all 0.6s linear;
+}
+.candidate-slide:target .candidate-content{
+	opacity: 1;
+	transform: scale(1);
+}
+.candidate-content:active p{
+	transform: scale(2);
+}
+.candidate-content p{
+	line-height: 24px;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.9);
+	color: rgba(22, 22, 21, 0.9);
+	padding: 15px 20px;
+	margin-bottom: 10px;
+	background: rgba(250, 247, 247, 0.96);
+	font-style: normal;
+	color: black;
+	font-size: 35px;
+	border-top: 7px solid rgba(103,59,77,0.6);
+
+	transition: all 0.3s linear;
+}
+.candidate-back{
+	outline: none;
+	text-indent: -9000px;
+	width: 100%;
+	height:100%;
+	background: transparent url(images/arrow.png) no-repeat center center;
+	position: absolute;
+	top: 3px;
+	left: -22px;
+	cursor: pointer;
+	opacity:0;
+	transition: all 0.4s ease-in-out 1s;
+}
+.candidate-slide:target .candidate-back{
+	left: 3px;
+	opacity: 1;
+}
+
+/* Main Items */
+.candidate-slide nav a[href="#slide-1"]{
+	background-image: url(images/1.jpg);
+	height: 5em;
+	text-align: bottom;
+}
+.candidate-slide nav a[href="#slide-2"]{
+	background-image: url(images/2.jpg);
+	height: 5em;
+
+}
+.candidate-slide nav a[href="#slide-3"]{
+	background-image: url(images/3.jpg);
+	height: 5em;
+
+}
+
+/* Items and sub-items of slide 1*/
+.candidate-slide nav a[href="#slide-1-1"],
+#slide-1-1 .candidate-content {
+	background-image: url(images/1.jpg);
+	height: 3em;
+	
+}
+.candidate-slide nav a[href="#slide-1-2"],
+slide-1-2 .candidate-content {
+	background-image: url(images/5.jpg);
+	height: 3em;
+	
+}
+
+.candidate-slide nav a[href="#slide-1-3"],
+#slide-1-3 .candidate-content {
+	background-image: url(images/committee.jpg);
+	height: 3em;
+
+}
+.candidate-slide nav a[href="#slide-1-4"],
+#slide-1-4 .candidate-content {
+	background-image: url(images/bill.jpg);
+	color: #000000;
+	height: 3em;
+
+}
+
+/* Items and sub-items of slide 2*/
+.candidate-slide nav a[href="#slide-2-1"],
+#slide-2-1 .candidate-content {
+	background-image: url(images/2.jpg);
+
+	
+
+}
+.candidate-slide nav a[href="#slide-2-2"],
+#slide-2-2 .candidate-content {
+	background-image: url(images/5.jpg);
+	height: 3em;
+}
+	
+
+
+.candidate-slide nav a[href="#slide-2-3"],
+#slide-2-3 .candidate-content {
+	background-image: url(images/committee.jpg);
+
+}
+.candidate-slide nav a[href="#slide-2-4"],
+#slide-2-4 .candidate-content {
+	background-image: url(images/bill.jpg);
+	color: #000000;
+	height: 3em;
+
+}
+
+/* Items and sub-items of slide 3*/
+.candidate-slide nav a[href="#slide-3-1"],
+#slide-3-1 .candidate-content {
+	background-image: url(images/3.jpg);
+	height: 3em;
+}
+.candidate-slide nav a[href="#slide-3-2"],
+#slide-3-2 .candidate-content {
+	background-image: url(images/5.jpg);
+	height: 3em;
+}
+.candidate-slide nav a[href="#slide-3-3"],
+#slide-3-3 .candidate-content {
+	background-image: url(images/committee.jpg);
+	height: 60em;
+}
+.candidate-slide nav a[href="#slide-3-4"],
+#slide-3-4 .candidate-content {
+	background-image: url(images/bill.jpg);
+	color: #000000;
+	height: 4em;
+}
+@media screen and (max-width: 1060px){
+	.candidate-slide-sub nav a{
+		font-size: 28px;
+	}
+}
+@media screen and (max-width: 900px){
+	.candidate-container h2{
+		font-size: 38px;
+		line-height: 95px;
+	}
+	.candidate-slide nav a{
+		font-size: 38px;
+	}
+	.candidate-slide-sub nav a{
+		width: auto;
+		font-size: 36px;
+		display: block;
+	}
+	.candidate-slide-sub nav a:nth-child(odd){
+		margin-right: 0px;
+	}
+}
+
+
+/* General Style */
+body{
+	font-family: "Garamond", "Palatino", "Palatino Linotype", "Palatino LT STD", Georgia, serif;
+	background: rgb(85, 97, 112)  repeat top left;
+	font-weight: 400;
+	font-size: 15px;
+	color: #391b27;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+	
+
+.container{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	text-align: center;
+}
+.clr{
+	clear: both;
+}
+.container > header{
+	padding: 20px 30px 10px 30px;
+	margin: 0px 20px 10px 20px;
+	position: relative;
+	display: block;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-align: center;
+}
+.container > header h1{
+	font-family: 'Garamond', 'Arial Narrow', Arial, sans-serif;
+	font-size: 50px;
+	line-height: 35px;
+	position: relative;
+	font-weight: 400;
+	color: #faf8f9fd;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+    padding: 0px 0px 5px 0px;
+}
+
+.container > header h2{
+	font-size: 32px;
+	font-style: italic;
+	color: #eee1e6;
+	text-shadow: 0px 1px 1px rgba(255,255,255,0.8);
+	padding: 5px 0px 15px 0px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+}
+/* Header Style */
+
+.Home-Button{
+    text-align:center;
+	
+	font-style: "Geramond";
+	line-height: 80px;
+	padding: 5px 10px 15px 0px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+.Home-Button a{
+   
+	margin: 0px 4px;
+	padding: 0px 4px;
+	color: #fff;
+	line-height: 20px;	
+	font-style: italic;
+	font-size: 75px;
+	border-radius: 3px;
+	transition: all 0.2s linear;
+}
+.Home-Button a:hover{
+	background: rgba(103,59,77,0.4);
+}
+.Home-Button a.current-demo,
+.Home-Buttons a.current-demo:hover{
+	background: rgba(103,59,77,0.4);
+}
+#scorecards a {
+	display: inline-block;
+	border: 1px solid #9D2146;
+	border-radius: 4px;
+	text-decoration: none;
+	padding: 1px 3px;
+	margin: 0 .5em .5em 0;
+	color: inherit;
+}
+
+#scorecards a:hover {
+	background-color: #B46;
+	color: white;
+}
